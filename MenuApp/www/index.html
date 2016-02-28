@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html ng-app="myMenus">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+
+    <!--
+        Personnalisez la stratégie de sécurité de contenu dans la balise méta ci-dessous selon vos besoins. Ajoutez 'unsafe-inline' à default-src pour activer JavaScript directement dans les lignes.
+        Pour obtenir des détails, consultez http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <title>MenuApp</title>
+
+    <!-- Références MenuApp -->
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- nav bar -->
+
+
+    <!-- angularjs -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    
+    <!-- custom scripts -->
+    <script src="js/app.js"></script>
+
+    <script src="js/controllers/maListeController.js"></script>
+    <script src="js/controllers/maSemaineController.js"></script>
+    <script src="js/controllers/mesAlimentsController.js"></script>
+    <script src="js/controllers/mesRecettesController.js"></script>
+
+    <script src="cordova.js"></script>
+
+    <script src="js/index.js"></script>
+
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="row">
+            <div class="center-block">
+                <div class="col-xs-3"><a href="#/"><img src="images/calendrier.png" /></a></div>
+                <div class="col-xs-3"><a href="#/mesRecettes"><img src="images/recette.png" /></a></div>
+                <div class="col-xs-3"><a href="#/mesAliments"><img src="images/aliments.png" /></a></div>
+                <div class="col-xs-3"><a href="#/maListe"><img src="images/liste_courses.png" /></a></div>
+            </div>
+        </div>
+
+
+            <!--<ul class="nav navbar-nav">
+                <li class="active"><a href="#/">MSe</a></li>
+                <li><a href="#/mesRecettes">MRe</a></li>
+                <li><a href="#/mesAliments">MAl</a></li>
+                <li><a href="#/maListe">MLi</a></li>
+            </ul>-->
+        
+
+    </nav>
+
+
+        <div class="container">
+            <!--<nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">Ma semaine</a></li>
+                        <li><a href="#/mesRecettes">Mes recettes</a></li>
+                        <li><a href="#/mesAliments">Mes aliments</a></li>
+                        <li><a href="#/maListe">Ma liste de courses</a></li>
+                    </ul>
+                </div>
+            </nav>-->
+            <!--<nav class="navbar navbar-inverse navbar-fixed-bottom">-->
+            <!--<nav class="navbar-nav navbar-default"
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">Ma semaine</a></li>
+                        <li><a href="#/mesRecettes">Mes recettes</a></li>
+                        <li><a href="#/mesAliments">Mes aliments</a></li>
+                        <li><a href="#/maListe">Ma liste de courses</a></li>
+                    </ul>
+                </div>
+            </nav>-->
+
+            <ng-view></ng-view>
+            
+            
+
+        </div>
+
+        <!-- Référence Cordova ajoutée à votre application une fois générée. -->
+
+    <script src="scripts/platformOverrides.js"></script>
+    <script src="scripts/SQLitePlugin.js"></script>
+
+</body>
+</html>
